@@ -71,27 +71,18 @@ This allows learners to spend their time **learning instead of preparing**.
 
 ### 🔗 Live Application
 
-```text
-[ Live URL ]
-```
+https://ai-powered-learning-assistant-s32w-rfq7xqdt5-varun-3b6d.vercel.app/login
 
 ### 📄 Sample Document
 
-```text
-[ Demo PDF / Notes ]
-```
+https://shorturl.at/ow7BP
 
-### 🎥 Demo Video
-
-```text
-[ Loom / YouTube Demo ]
-```
 
 ### 🔑 Demo Credentials
 
 | Email | Password |
 |--------|----------|
-| demo@example.com | Demo123 |
+| demo@email.com | demo123 |
 
 ---
 
