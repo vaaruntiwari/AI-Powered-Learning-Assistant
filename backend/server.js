@@ -31,7 +31,7 @@ connectDB()
 
 app.use(
     cors({
-        origin:"*",
+        origin:"https://ai-powered-learning-assistant-s32w-rfq7xqdt5-varun-3b6d.vercel.app",
         methods:["GET","POST","PUT","DELETE"],
         allowedHeaders:["Content-Type","Authorization"],
         credentials:true
