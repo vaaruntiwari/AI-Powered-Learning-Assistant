@@ -71,7 +71,7 @@ This allows learners to spend their time **learning instead of preparing**.
 
 ### 🔗 Live Application
 
-https://ai-powered-learning-assistant-s32w-rfq7xqdt5-varun-3b6d.vercel.app/login
+https://ai-powered-learning-assistant-s32w-rfq7xqdt5-varun-3b6d.vercel.app
 
 ### 📄 Sample Document
 
