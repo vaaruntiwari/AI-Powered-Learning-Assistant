@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import flashcardService from '../../services/flashCardService';
+import flashcardService from '../../services/flashcardService';
 import Spinner from '../../components/common/Spinner';
 import PageHeader from '../../components/common/PageHeader';
 import FlashcardSetCard from '../../components/flashcards/FlashcardSetCard';
