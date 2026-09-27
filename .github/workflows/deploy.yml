@@ -1,0 +1,38 @@
+name: Deploy MERN App
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build and push backend image
+        run: |
+          docker build -t varun2700/backend:latest ./backend
+          docker push varun2700/backend:latest
+
+      - name: Build and push frontend image
+        run: |
+          docker build --build-arg VITE_API_URL=http://51.21.190.45:8000 -t varun2700/frontend:latest ./frontend/ai-learning-assistant
+          docker push varun2700/frontend:latest
+
+      - name: Redeploy backend container
+        run: |
+          docker stop backend || true
+          docker rm backend || true
+          docker run -d -p 8000:8000 --name backend \
+            -e MONGODB_URI='${{ secrets.MONGODB_URI }}' \
+            -e JWT_SECRET='${{ secrets.JWT_SECRET }}' \
+            -e GEMINI_API_KEY='${{ secrets.GEMINI_API_KEY }}' \
+            varun2700/backend:latest
+
+      - name: Redeploy frontend container
+        run: |
+          docker stop frontend || true
+          docker rm frontend || true
+          docker run -d -p 3000:80 --name frontend varun2700/frontend:latest
