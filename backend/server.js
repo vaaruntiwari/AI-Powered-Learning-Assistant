@@ -30,13 +30,16 @@ connectDB()
 //Middleware to handle CORS
 
 app.use(
-    cors({
-        origin:"https://ai-powered-learning-assistant-s32w-rfq7xqdt5-varun-3b6d.vercel.app",
-        methods:["GET","POST","PUT","DELETE"],
-        allowedHeaders:["Content-Type","Authorization"],
-        credentials:true
-    })
-)
+  cors({
+    origin: [
+      "https://ai-powered-learning-assistant-s32w-rfq7xqdt5-varun-3b6d.vercel.app",
+      "http://51.21.190.45:3000"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
+  })
+);
 
 app.use("/api/auth",authRoutes)
 app.use("/api/documents",documentRoutes)
