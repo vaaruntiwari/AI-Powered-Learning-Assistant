@@ -355,7 +355,7 @@ This project showcases practical experience in:
 
 Contributions, issues, and feature requests are welcome.
 
-Feel free to fork the repository and submit a Pull Request.
+Feel free to fork the repository and submit Pull Requests.
 
 ---
 
